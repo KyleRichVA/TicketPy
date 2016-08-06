@@ -22,5 +22,6 @@ class Connection(object):
         self.api_key = api_key
         self.version = version
 
-    def create_url(self, api_cat):
+    def create_url(self, api_cat, search_cat):
         """Creates the url for TM API requests."""
+

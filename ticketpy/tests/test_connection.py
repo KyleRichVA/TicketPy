@@ -23,5 +23,5 @@ def test_create_url(test_connection_no_ver, test_connection_ver):
     correctly."""
     good_url = ("https://app.ticketmaster.com/discovery/v2/"
                 "events.json?apikey=thisismyfakeapikey")
-    assert test_connection_no_ver.create_url("discovery") == good_url
-    assert test_connection_ver.create_url("discovery") == good_url
+    assert test_connection_no_ver.create_url("discovery", "events") == good_url
+    assert test_connection_ver.create_url("discovery", "events") == good_url
