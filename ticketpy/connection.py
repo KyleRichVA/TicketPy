@@ -11,6 +11,7 @@ For more information on the Ticketmaster API visit
 http://developer.ticketmaster.com
 """
 
+
 class Connection(object):
     """Connection class used to make API queries to Ticketmaster"""
     def __init__(self, api_key, version=2):
