@@ -18,7 +18,7 @@ def test_connection_ver():
     return Connection("thisismyfakeapikey", 2)
 
 
-def test_create_url(test_connection_no_ver, test_connection_ver):
+def test_create_url_discovery_events(test_connection_no_ver, test_connection_ver):
     """Tests create_url method combines strings together
     correctly."""
     good_url = ("https://app.ticketmaster.com/discovery/v2/"

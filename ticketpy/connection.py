@@ -23,5 +23,11 @@ class Connection(object):
         self.version = version
 
     def create_url(self, api_cat, search_cat):
-        """Creates the url for TM API requests."""
-
+        """Creates the url for TM API requests.
+        Parameters:
+        api_cat(string): Which api package is searched
+        search_cat(string): Which api resource is searched"""
+        url_base = ("https://app.ticketmaster.com/{package}/{version}/"
+                    "{resource}.json?apikey={API_key}")
+        return url_base.format(package=api_cat, version=self.version,
+                               resource=search_cat, API_key=self.api_key)
